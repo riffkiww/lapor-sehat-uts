@@ -1,22 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap');
 
 :root {
-  --bg-soft: #f4f7fb;
+  --bg-soft: #f8fafc;
   --text-main: #1f2a37;
   --text-muted: #6b7280;
   --card: #ffffff;
-  --line: #dbe3ee;
+  --line: #e2e8f0;
   --brand: #0f766e;
-  --brand-2: #f97316;
+  --brand-light: #ccfbf1;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html,
-body,
-#root {
+html, body, #root {
   width: 100%;
   min-height: 100%;
 }
@@ -26,10 +24,12 @@ body {
   min-width: 320px;
   font-family: 'Manrope', 'Segoe UI', sans-serif;
   color: var(--text-main);
-  background:
-    radial-gradient(1200px 500px at 15% -10%, #ccfbf1 0%, transparent 60%),
-    radial-gradient(1000px 500px at 100% 0%, #ffedd5 0%, transparent 55%),
-    var(--bg-soft);
+  background-color: var(--bg-soft);
+  /* Latar belakang modern yang sangat halus */
+  background-image: 
+    radial-gradient(at 0% 0%, #ffffff 0px, transparent 50%), 
+    radial-gradient(at 100% 100%, #e0f2fe 0px, transparent 50%);
+  background-attachment: fixed;
 }
 
 a {
@@ -37,28 +37,22 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-p {
+h1, h2, h3, p {
   margin: 0;
 }
 
-input,
-textarea,
-select {
+input, textarea, select {
   width: 100%;
   border: 1px solid var(--line);
   background: #fff;
   color: var(--text-main);
   border-radius: 12px;
-  padding: 10px 12px;
+  padding: 12px 16px;
   font: inherit;
+  transition: all 0.2s ease;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
+input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: #14b8a6;
   box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.15);
