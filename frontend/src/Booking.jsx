@@ -20,7 +20,7 @@ function Booking() {
 
   const fetchBooking = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/booking');
+      const response = await axios.get('http://13.213.7.1:5050/api/booking');
       setDaftarBooking(response.data || []);
     } catch (error) {
       console.error("Gagal mengambil data booking:", error);
