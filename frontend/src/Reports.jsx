@@ -11,7 +11,7 @@ function Reports() {
   const fetchLaporan = async () => {
     try {
       // ✅ Kabel 1 (GET) sudah di 5050
-      const response = await axios.get('http://localhost:5050/api/kesehatan');
+      const response = await axios.get('http://13.213.7.1:5050/api/kesehatan');
       setDaftarLaporan(response.data);
     } catch (error) {
       console.error("Gagal mengambil data:", error);
@@ -33,7 +33,7 @@ function Reports() {
 
     try {
       // ✅ Kabel 2 (POST) SEKARANG SUDAH DI 5050!
-      const response = await axios.post('http://localhost:5050/api/kesehatan', formData, {
+      const response = await axios.post('http://13.213.7.1:5050/api/kesehatan', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       alert('Berhasil: ' + response.data.message);
