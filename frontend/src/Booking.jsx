@@ -37,7 +37,7 @@ function Booking() {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/booking', {
+      const response = await axios.post('http://13.213.7.1:5050/api/booking', {
         nama,
         telepon,
         alamat,

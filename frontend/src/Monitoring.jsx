@@ -21,7 +21,7 @@ function Monitoring() {
 
   const fetchMonitoring = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/monitoring');
+      const response = await axios.get('http://13.213.7.1:5050/api/monitoring');
       setDaftarMonitoring(response.data || []);
     } catch (error) {
       console.error("Gagal mengambil data monitoring:", error);
@@ -38,7 +38,7 @@ function Monitoring() {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/monitoring', {
+      const response = await axios.post('http://13.213.7.1:5050/api/monitoring', {
         nama,
         penyakit,
         desa
